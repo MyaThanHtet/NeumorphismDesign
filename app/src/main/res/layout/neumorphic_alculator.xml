@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <soup.neumorphism.NeumorphCardView
+        android:id="@+id/showView"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:neumorph_shapeType="pressed">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="@drawable/corner_bg">
+
+            <soup.neumorphism.NeumorphTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="0000"
+                android:textColor="#6D3E3E3E"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.942"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.301" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </soup.neumorphism.NeumorphCardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showView"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/fist_row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <soup.neumorphism.NeumorphButton
+                android:id="@+id/c"
+                style="@style/Widget.Neumorph.Button"
+                android:layout_width="90dp"
+                android:layout_height="80dp"
+                android:text="C"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/left_pram"
+                app:layout_constraintTop_toTopOf="parent"
+                app:neumorph_shapeType="flat" />
+
+            <soup.neumorphism.NeumorphButton
+                android:id="@+id/left_pram"
+                style="@style/Widget.Neumorph.Button"
+                android:layout_width="90dp"
+                android:layout_height="80dp"
+                android:text="("
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/right_pram"
+                app:layout_constraintStart_toEndOf="@+id/c"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <soup.neumorphism.NeumorphButton
+                android:id="@+id/right_pram"
+                style="@style/Widget.Neumorph.Button"
+                android:layout_width="90dp"
+                android:layout_height="80dp"
+                android:text=")"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/x"
+                app:layout_constraintStart_toEndOf="@+id/left_pram"
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+
+            <soup.neumorphism.NeumorphButton
+                android:id="@+id/x"
+                style="@style/Widget.Neumorph.Button"
+                android:layout_width="90dp"
+                android:layout_height="80dp"
+                android:text="X"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/right_pram"
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/second_row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fist_row">
+
+            <soup.neumorphism.NeumorphButton
+                android:id="@+id/square_root"
+                style="@style/Widget.Neumorph.Button"
+                android:layout_width="90dp"
+                android:layout_height="80dp"
+                android:text="Root"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/percent_sign"
+                app:layout_constraintTop_toTopOf="parent"
+                app:neumorph_shapeType="flat" />
+
+            <soup.neumorphism.NeumorphButton
+                android:id="@+id/percent_sign"
+                style="@style/Widget.Neumorph.Button"
+                android:layout_width="90dp"
+                android:layout_height="80dp"
+                android:text="%"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/plus_min"
+                app:layout_constraintStart_toEndOf="@+id/square_root"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <soup.neumorphism.NeumorphButton
+                android:id="@+id/plus_min"
+                style="@style/Widget.Neumorph.Button"
+                android:layout_width="90dp"
+                android:layout_height="80dp"
+                android:text="+/_"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/div"
+                app:layout_constraintStart_toEndOf="@+id/percent_sign"
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+
+            <soup.neumorphism.NeumorphButton
+                android:id="@+id/div"
+                style="@style/Widget.Neumorph.Button"
+                android:layout_width="90dp"
+                android:layout_height="80dp"
+                android:text="/"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/plus_min"
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/third_row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/second_row">
+
+            <soup.neumorphism.NeumorphButton
+                android:id="@+id/seven"
+                style="@style/Widget.Neumorph.Button"
+                android:layout_width="90dp"
+                android:layout_height="80dp"
+                android:text="7"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/eight"
+                app:layout_constraintTop_toTopOf="parent"
+                app:neumorph_shapeType="flat" />
+
+            <soup.neumorphism.NeumorphButton
+                android:id="@+id/eight"
+                style="@style/Widget.Neumorph.Button"
+                android:layout_width="90dp"
+                android:layout_height="80dp"
+                android:text="8"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/nine"
+                app:layout_constraintStart_toEndOf="@+id/seven"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <soup.neumorphism.NeumorphButton
+                android:id="@+id/nine"
+                style="@style/Widget.Neumorph.Button"
+                android:layout_width="90dp"
+                android:layout_height="80dp"
+                android:text="9"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/minus"
+                app:layout_constraintStart_toEndOf="@+id/eight"
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+
+            <soup.neumorphism.NeumorphButton
+                android:id="@+id/minus"
+                style="@style/Widget.Neumorph.Button"
+                android:layout_width="90dp"
+                android:layout_height="80dp"
+                android:text="-"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/nine"
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/fourth_row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/third_row">
+
+            <soup.neumorphism.NeumorphButton
+                android:id="@+id/four"
+                style="@style/Widget.Neumorph.Button"
+                android:layout_width="90dp"
+                android:layout_height="80dp"
+                android:text="4"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/five"
+                app:layout_constraintTop_toTopOf="parent"
+                app:neumorph_shapeType="flat" />
+
+            <soup.neumorphism.NeumorphButton
+                android:id="@+id/five"
+                style="@style/Widget.Neumorph.Button"
+                android:layout_width="90dp"
+                android:layout_height="80dp"
+                android:text="5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/six"
+                app:layout_constraintStart_toEndOf="@+id/four"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <soup.neumorphism.NeumorphButton
+                android:id="@+id/six"
+                style="@style/Widget.Neumorph.Button"
+                android:layout_width="90dp"
+                android:layout_height="80dp"
+                android:text="6"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/five"
+                app:layout_constraintStart_toEndOf="@+id/plus"
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+
+            <soup.neumorphism.NeumorphButton
+                android:id="@+id/plus"
+                style="@style/Widget.Neumorph.Button"
+                android:layout_width="90dp"
+                android:layout_height="80dp"
+                android:text="+"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/six"
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/fifth_row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fourth_row">
+
+            <soup.neumorphism.NeumorphButton
+                android:id="@+id/one"
+                style="@style/Widget.Neumorph.Button"
+                android:layout_width="90dp"
+                android:layout_height="80dp"
+                android:text="1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/two"
+                app:layout_constraintTop_toTopOf="parent"
+                app:neumorph_shapeType="flat" />
+
+            <soup.neumorphism.NeumorphButton
+                android:id="@+id/two"
+                style="@style/Widget.Neumorph.Button"
+                android:layout_width="90dp"
+                android:layout_height="80dp"
+                android:text="2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/three"
+                app:layout_constraintStart_toEndOf="@+id/one"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <soup.neumorphism.NeumorphButton
+                android:id="@+id/three"
+                style="@style/Widget.Neumorph.Button"
+                android:layout_width="90dp"
+                android:layout_height="80dp"
+                android:text="3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/two"
+                app:layout_constraintStart_toEndOf="@+id/equal"
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+
+            <soup.neumorphism.NeumorphButton
+                android:id="@+id/equal"
+                style="@style/Widget.Neumorph.Button"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:text="="
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/three"
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/seventh_row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="90dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fifth_row">
+
+            <soup.neumorphism.NeumorphButton
+                android:id="@+id/degree"
+                style="@style/Widget.Neumorph.Button"
+                android:layout_width="90dp"
+                android:layout_height="80dp"
+                android:text="."
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/zero"
+                app:layout_constraintTop_toTopOf="parent"
+                app:neumorph_shapeType="flat" />
+
+            <soup.neumorphism.NeumorphButton
+                android:id="@+id/zero"
+                style="@style/Widget.Neumorph.Button"
+                android:layout_width="90dp"
+                android:layout_height="80dp"
+                android:text="0"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/back"
+                app:layout_constraintStart_toEndOf="@+id/degree"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <soup.neumorphism.NeumorphButton
+                android:id="@+id/back"
+                style="@style/Widget.Neumorph.Button"
+                android:layout_width="90dp"
+                android:layout_height="80dp"
+                android:text="back "
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/zero"
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
